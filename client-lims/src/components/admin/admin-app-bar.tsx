@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CircleUser, Menu, Package2, Search } from "lucide-react";
+import { CircleUser, Package2, Search } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,6 @@ import {
 
 
 import { Input } from "@/components/ui/input";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/globals/mode-toggle";
 import { Button } from "../ui/button";
 import { NavigationMenuDemo } from "./navbar-test";
@@ -28,13 +27,10 @@ export default function AdminAppBar() {
           <Package2 className="h-6 w-6" />
           <span className="sr-only">Acme Inc</span>
         </Link>
-        <Link
-          href="#"
-          className="text-foreground transition-colors hover:text-foreground"
-        >
-          Dashboard
-        </Link>
-        <Link
+
+        <NavigationMenuDemo />
+
+        {/* <Link
           href="#"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
@@ -45,8 +41,8 @@ export default function AdminAppBar() {
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
           Schedule
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           href="#"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
@@ -56,65 +52,11 @@ export default function AdminAppBar() {
           href="#"
           className="text-muted-foreground transition-colors hover:text-foreground"
         >
-          Team
-        </Link>
-        <Link
-          href="#"
-          className="text-muted-foreground transition-colors hover:text-foreground"
-        >
           Signatures
-        </Link>
+        </Link> */}
 
-        <NavigationMenuDemo />
       </nav>
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="shrink-0 md:hidden">
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left">
-          <nav className="grid gap-6 text-lg font-medium">
-            <Link
-              href="#"
-              className="flex items-center gap-2 text-lg font-semibold"
-            >
-              <Package2 className="h-6 w-6" />
-              <span className="sr-only">Acme Inc</span>
-            </Link>
-            <Link href="#" className="hover:text-foreground">
-              Dashboard
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              New Patients
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Products
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Customers
-            </Link>
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground"
-            >
-              Analytics
-            </Link>
-
-           
-          </nav>
-        </SheetContent>
-      </Sheet>
+     
       <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <form className="ml-auto flex-1 sm:flex-initial">
           <div className="relative">

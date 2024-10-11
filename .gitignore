@@ -12,4 +12,9 @@ env/
 venv/ 
 ENV/ 
 env.bak/ 
-venv.bak/ 
+venv.bak/ # Environment configuration
+**/.env
+
+# misc
+.DS_Store
+*.pem
