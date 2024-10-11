@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  CalendarClock,
+  ClipboardPlus,
+  Eye,
   File,
   Home,
+  LayoutList,
   LineChart,
   ListFilter,
   MoreHorizontal,
@@ -13,18 +17,13 @@ import {
   Search,
   Settings,
   ShoppingCart,
+  Signature,
+  UserPlus,
+  Users,
   Users2,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -60,6 +59,7 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/tooltip";
+import { Separator } from "@/components/ui/separator";
 
 export const description =
   "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.";
@@ -80,7 +80,7 @@ export default function Dashboard() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="#"
+                  href="/admin"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                   <Home className="h-5 w-5" />
@@ -89,53 +89,98 @@ export default function Dashboard() {
               </TooltipTrigger>
               <TooltipContent side="right">Dashboard</TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  <span className="sr-only">Orders</span>
+                  <ClipboardPlus className="h-5 w-5" />
+                  <span className="sr-only">New Patient</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Orders</TooltipContent>
+              <TooltipContent side="right">New Patient</TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <Package className="h-5 w-5" />
-                  <span className="sr-only">Products</span>
+                  <CalendarClock className="h-5 w-5" />
+                  <span className="sr-only">Schedule</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Products</TooltipContent>
+              <TooltipContent side="right">Schedule</TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <Users2 className="h-5 w-5" />
-                  <span className="sr-only">Customers</span>
+                  <Eye className="h-5 w-5" />
+                  <span className="sr-only">Patients Visits</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Customers</TooltipContent>
+              <TooltipContent side="right">Patients Visits</TooltipContent>
             </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <LineChart className="h-5 w-5" />
-                  <span className="sr-only">Analytics</span>
+                  <LayoutList className="h-5 w-5" />
+                  <span className="sr-only">Records</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Analytics</TooltipContent>
+              <TooltipContent side="right">Records</TooltipContent>
+            </Tooltip>
+
+            <Separator asChild className="border-b-2" />
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="#"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                >
+                  <UserPlus className="h-5 w-5" />
+                  <span className="sr-only">New User</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">New User</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="#"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                >
+                  <Users className="h-5 w-5" />
+                  <span className="sr-only">New User</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">New User</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="#"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                >
+                  <Signature className="h-5 w-5" />
+                  <span className="sr-only">New User</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">New User</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </nav>
@@ -212,25 +257,7 @@ export default function Dashboard() {
               </nav>
             </SheetContent>
           </Sheet>
-          <Breadcrumb className="hidden md:flex">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="#">Dashboard</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="#">Products</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>All Products</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+          
           <div className="relative ml-auto flex-1 md:grow-0">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
