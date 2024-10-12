@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   const pathname = usePathname();
 
-  const isNonHomeNav = ["/admin", "/signin", "/signup"].some((route) =>
+  const isNonHomeNav = ["/admin", "/signin", "/signup", "/organisation-setup"].some((route) =>
     pathname.startsWith(route)
   );
 
