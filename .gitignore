@@ -68,3 +68,5 @@ build/
 *.log
 *.gz
 *.zip
+
+.DS_Store
