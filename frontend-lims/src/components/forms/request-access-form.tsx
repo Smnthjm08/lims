@@ -1,11 +1,8 @@
-
-
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "../ui/shadcn/button"
 import { UserAuthForm } from "./user-auth"
 import Image from "next/image"
 import Link from "next/link"
-
 
 export default function RequestAccessForm() {
   return (
@@ -26,7 +23,7 @@ export default function RequestAccessForm() {
           className="hidden dark:block"
         />
       </div>
-      <div className="container relative hidden h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="container relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
         <Link
           href="/login"
           className={cn(
@@ -39,7 +36,7 @@ export default function RequestAccessForm() {
         <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
           <div className="absolute inset-0 bg-zinc-900" />
           <div className="relative z-20 flex items-center text-lg font-medium">
-           <Image src={"/logo.svg"} alt={"logo"} width={250} height={250}/>
+            <Image src={"/logo.svg"} alt={"logo"} width={250} height={250}/>
           </div>
           <div className="relative z-20 mt-auto">
             <blockquote className="space-y-2">
