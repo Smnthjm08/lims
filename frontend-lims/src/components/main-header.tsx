@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { ModeToggle } from "./mode-toogle";
+import { ModeToggle } from "./utility/mode-toogle";
 import { Github } from "lucide-react";
 import { Button } from "./ui/shadcn/button";
 import Link from "next/link";

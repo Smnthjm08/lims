@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { inter } from "@/app/ui/fonts";
 import "./globals.css";
 import { ThemeProvider } from "@/components/utility/theme-provider";
+import HomeHeader from "@/components/main-header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+                <HomeHeader />
           {children}
         </ThemeProvider>
       </body>
